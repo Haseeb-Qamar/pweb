@@ -60,7 +60,12 @@ td{
   margin: 0 auto;
   margin-top: 25px;
 }
-
+#answer{
+  border: 1px solid black;
+  width: 150px;
+  box-shadow: 3px 5px #888888;
+  margin: 0 auto;
+}
 .inputs input{
   border-radius: 1em;
   border: 1px solid black;

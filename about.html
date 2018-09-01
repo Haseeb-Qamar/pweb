@@ -36,6 +36,10 @@
         <span class="mytext">Haseeb's favourite food.</span>
         <input type="text" id="food">
       </div>
+      <div class="inputs">
+        <span class="mytext">Haseeb's favourite series.</span>
+        <input type="text" id="series">
+      </div>
       <hr>
       <div id="btn" class="text-center">
         <input type="button" name="" id="" value="submit" class="btn btn-default" onclick="test()">
@@ -50,10 +54,11 @@
 <script type="text/javascript">
   function test(){
     var score = 0;
-    var color = document.getElementById('color').value;
-    var game = document.getElementById('game').value;
-    var movie = document.getElementById('movie').value;
-    var food = document.getElementById('food').value;
+    var color = document.getElementById('color').value.toLowerCase();
+    var game = document.getElementById('game').value.toLowerCase();
+    var movie = document.getElementById('movie').value.toLowerCase();
+    var food = document.getElementById('food').value.toLowerCase();
+    var series = document.getElementById('series').value.toLowerCase();
     if(color == 'yellow' || color == 'black'){
       document.getElementById('color').style.backgroundColor = "rgba(7, 166, 99, 1)";
       score++;
@@ -80,7 +85,14 @@
     else {
       document.getElementById('food').style.backgroundColor = "red";
     }
-    document.getElementById('answer').innerHTML = "Your Score: " + score + "/4";
+    if(series== 'the walking dead'){
+      document.getElementById('series').style.backgroundColor = "rgba(7, 166, 99, 1)";
+      score++;
+    }
+    else {
+      document.getElementById('series').style.backgroundColor = "red";
+    }
+    document.getElementById('answer').innerHTML = "Your Score: " + score + "/5";
   }
 </script>
   </body>
