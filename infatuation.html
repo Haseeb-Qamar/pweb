@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+    
+    </style>
+<body id="body">
+        
+           <div class="upper convert">
+               
+           </div>
+            <div class="container">
+                <div class="title mobile">
+                     <b>Haseeb Qamar</b> <br> <span id="desc"><b>Software Engineer</b></span>
+                </div>
+                <div class="mycontainer">
+                   <div class="row">
+                    <div class="col-sm-3">
+                    
+                    <img id="avatar" class="" src="assets/avatar.jpg" alt="">
+                    
+                    
+                    </div>
+                    <div class="col-sm-9">
+                    
+                    <div class="descuser">
+                         <span id="greetings">
+                         
+                         My Crush?
+                         <span class="angle"></span>
+                         
+                         </span>
+                         
+                    <br>
+                        <div class="crusharea">
+                             Want to know her? <br>
+                            <form action="">
+                                
+                                <input type="checkbox" name="" id="check" required> I hereby certify that iPhone sucks and I will permanently switch to Android OS if not already. <br>
+                                <input class="btn btn-success btn-sm" type="button" name="" id="btn" value="Submit">
+                                
+                            </form>
+                            <div id="namereveal" style="display:none">
+                                
+                            </div>
+                        </div>
+                    <div class="bar convert">
+                        <div class="social text-center">
+                          <img class="socialicons" src="assets/social1.png" alt="">
+                        </div>
+                    </div>
+                    </div>
+                    
+                    </div>   
+                   </div>
+                    
+                </div>
+                
+            </div>
+            
+        
+        <script>
+        var checkbox = document.getElementById('check');
+        window.onload = function(){dothis();
+};
+        function dothis(){
+            var getScreenWidth = screen.width;
+            console.log(getScreenWidth);
+            if(getScreenWidth < 602){
+                    var name = document.getElementsByClassName('mobile');
+                    name[0].classList.add("text-center");
+               }
+        }
+        function validate(){
+            if(checkbox.checked == true){
+               checkbox.disabled = true;
+               var convert = document.getElementsByClassName('convert');
+               for(i = 0 ; i < convert.length ; i++){
+                   convert[i].style.backgroundColor = "firebrick";
+               }
+               document.getElementById('body').style.backgroundColor="black";
+               document.getElementById('avatar').src="assets/crush.jpg";
+               document.getElementById('namereveal').innerHTML = " Decipher the code 078101104097 to know.";
+               }
+        }
+            $("#btn").on("click", function(){
+                if (checkbox.checked == true){
+                $("#namereveal").hide(1);
+                $("#check").prop("disabled", true);
+                $(".convert").css("backgroundColor", "firebrick");
+                $(body).css("backgroundColor", "black");
+                $("#avatar").attr("src", "assets/crush.jpg");
+                $("#namereveal").html("Decipher the code <span class='id'>078101104097</span> to know.");
+                $("#namereveal").show(2000);
+                $(".id").css({"fontSize": "18px", "fontWeight": "bold"});    
+                }
+                if (checkbox.checked == false){
+                $("#namereveal").html("NO crush for you.").show(1000);    
+                }
+                
+            })
+        </script>
+    </body>
+</html>

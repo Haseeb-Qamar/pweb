@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+<!--        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">-->
+        
+    </head>
+    <style>
+    
+    </style>
+    <body>
+        
+           <div class="upper">
+               
+           </div>
+            <div class="container">
+                <div class="title mobile">
+                     <b>Haseeb Qamar</b> <br> <span id="desc"><b>Software Engineer</b></span>
+                </div>
+                <div class="mycontainer">
+                   <div class="row">
+                    <div class="col-sm-3">
+                    
+                    <img id="avatar" class="" src="assets/avatar.jpg" alt="">
+                    
+                    
+                    </div>
+                    <div class="col-sm-9">
+                    
+                    <div class="descuser">
+                         <span id="greetings">
+                         
+                         Hello & Welcome
+                         <span class="angle"></span>
+                         
+                         </span>
+                         
+                    <br>
+                        <span id="name">I'M <b>Haseeb Qamar</b></span><br> Software Engineer & Xbox Addict
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Age</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>haseebqamar117@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>+92 3234902147</td>
+                        </tr>
+                        <tr>
+                            <td>Website</td>
+                            <td><a href="#">http://www.haseeb-qamar.tk/</a></td>
+                        </tr>
+                        
+                    </table>
+                    <div class = "bar">
+                        <div class="social text-center">
+                          <a href="infatuation.html" title="Crush"> <img class="socialicons" src="assets/social1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="crush text-center">
+                       <a href="crush.php"><img src="assets/crush.jpg" alt=""></a> 
+                    </div>
+                    </div>
+                    
+                    </div>   
+                   </div>
+                    
+                </div>
+                
+            </div>
+            
+        
+        <script>
+        window.onload = function(){dothis();
+};
+        function dothis(){
+            var getScreenWidth = screen.width;
+            console.log(getScreenWidth);
+            if(getScreenWidth < 602){
+                    var name = document.getElementsByClassName('mobile');
+                    name[0].classList.add("text-center");
+               }
+        }
+        </script>
+    </body>
+</html>
