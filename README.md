@@ -1,2 +1,2 @@
 # pweb
-My Personal Website
+My Informal Personal Website
